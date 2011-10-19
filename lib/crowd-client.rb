@@ -13,7 +13,7 @@ module Crowd
       :url         => 'http://127.0.0.1:8095/crowd/rest/usermanagement/1/',
       :application => 'application',
       :password    => 'password',
-      :debug       => false
+      :logger       => false
     })
 
     def config
@@ -46,7 +46,7 @@ module Crowd
         :user_agent => "Crowd Client for Ruby/#{VERSION}"
       ) do |builder|
           builder.request  :json
-          builder.response :logger if config.debug
+          builder.use Faraday::Response::Logger, config.logger if config.logger
           builder.use Faraday::Response::ParseJson
           builder.adapter  :patron
       end.tap {|connection| connection.basic_auth config.application, config.password }
