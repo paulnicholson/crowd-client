@@ -1,6 +1,9 @@
+require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require File.expand_path(File.dirname(__FILE__) + '/../lib/crowd-client')
 
 describe Crowd::Client do
+
+  use_vcr_cassette
 
   describe "#config" do
     subject { Crowd::Client.config }
@@ -31,6 +34,14 @@ describe Crowd::Client do
     it "should validate the current session" do
       token = subject.login('user@example.com', 'password')
       subject.valid_session?(token).should be_true
+    end
+  end
+
+  describe "#in_group?" do
+
+    it "should confirm users are in groups" do
+      subject.in_group?('user@example.com', 'MyGroup').should be_true
+      subject.in_group?('user@example.com', 'OtherGroup').should be_false
     end
   end
 

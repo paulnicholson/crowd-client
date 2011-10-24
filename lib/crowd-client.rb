@@ -31,12 +31,20 @@ module Crowd
 
     def valid_session?(token)
       response = connection.post("session/#{token}", {})
-      response.status == 200 ? true : false
+      response.status == 200
     end
 
     def logout(token)
       response = connection.delete("session/#{token}", {})
       raise Exception::UnkownError if response.status != 204
+    end
+
+    def in_group?(username, group_name)
+      response = connection.get("user/group/nested") do |request|
+        request.params[:username] = username
+        request.params[:groupname] = group_name
+      end
+      response.status == 200
     end
 
     def connection
