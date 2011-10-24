@@ -39,6 +39,20 @@ module Crowd
       raise Exception::UnkownError if response.status != 204
     end
 
+    def user(token)
+      response = connection.get("session/#{token}") do |request|
+        request.params[:expand] = 'user'
+      end
+      response.body['user']
+    end
+
+    def user_groups(username)
+      response = connection.get("user/group/nested") do |request|
+        request.params[:username] = username
+      end
+      response.body['groups'].collect{|group| group['name']}
+    end
+
     def in_group?(username, group_name)
       response = connection.get("user/group/nested") do |request|
         request.params[:username] = username

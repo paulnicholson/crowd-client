@@ -45,6 +45,21 @@ describe Crowd::Client do
     end
   end
 
+  describe "#user(token)" do
+
+    it "should return the expanded user" do
+      token = subject.login('user@example.com', 'password')
+      subject.user(token)['name'].should == 'user@example.com'
+    end
+  end
+
+  describe "#user_groups(username)" do
+    it "should return the groups of the user" do
+      subject.user_groups('user@example.com').should include('MyGroup')
+      subject.user_groups('user@example.com').should_not include('OtherGroup')
+    end
+  end
+
   describe "#logout" do
 
     it "should logout the current session" do

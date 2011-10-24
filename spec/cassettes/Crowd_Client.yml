@@ -1,652 +1,6 @@
 ---
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://127.0.0.1:8095/user/group/nested
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      username:
-      - user@example.com
-      groupname:
-      - MyGroup
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 404
-      message: Not Found
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      content-type:
-      - text/html;charset=utf-8
-      content-length:
-      - '1006'
-      date:
-      - Mon, 24 Oct 2011 17:41:27 GMT
-    body: ! '<html><head><title>Apache Tomcat/6.0.32 - Error report</title><style><!--H1
-      {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
-      H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;}
-      H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;}
-      BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;}
-      B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;}
-      P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A
-      {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP
-      Status 404 - /user/group/nested</h1><HR size="1" noshade="noshade"><p><b>type</b>
-      Status report</p><p><b>message</b> <u>/user/group/nested</u></p><p><b>description</b>
-      <u>The requested resource (/user/group/nested) is not available.</u></p><HR
-      size="1" noshade="noshade"><h3>Apache Tomcat/6.0.32</h3></body></html>'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/akoqHwkAqtQHtriHaHKfwA00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=E3B16E4957759AA15D493512E36E5DDE; Path=/crowd
-      cache-control:
-      - no-cache, no-store, no-transform
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:41:27 GMT
-    body: ! '{"expand":"user","token":"akoqHwkAqtQHtriHaHKfwA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/akoqHwkAqtQHtriHaHKfwA00","rel":"self"}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/akoqHwkAqtQHtriHaHKfwA00
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 204
-      message: No Content
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=7DB3CA4FD107004EBD7B80A3444A5DF5; Path=/crowd
-      date:
-      - Mon, 24 Oct 2011 17:41:27 GMT
-    body: !!null 
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/akoqHwkAqtQHtriHaHKfwA00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 404
-      message: Not Found
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=3F4377B74E289159EB2093D7DBBA35A5; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:41:27 GMT
-    body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/cMPdTh8dEd586Z8pFpoc8g00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=E190FCEDC0E0F3EC04A4110F336716DA; Path=/crowd
-      cache-control:
-      - no-cache, no-store, no-transform
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:42:22 GMT
-    body: ! '{"expand":"user","token":"cMPdTh8dEd586Z8pFpoc8g00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/cMPdTh8dEd586Z8pFpoc8g00","rel":"self"}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/cMPdTh8dEd586Z8pFpoc8g00
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 204
-      message: No Content
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=EF59322E28B415D3606CAE145B9D44A8; Path=/crowd
-      date:
-      - Mon, 24 Oct 2011 17:42:22 GMT
-    body: !!null 
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/cMPdTh8dEd586Z8pFpoc8g00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 404
-      message: Not Found
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=905E33DD1C4EE45752732C847045D273; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:42:22 GMT
-    body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/PY2wAuVlJcwulTnBP5FIbQ00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=79CEC57B4545DFB4CEEF4DBFA12EF484; Path=/crowd
-      cache-control:
-      - no-cache, no-store, no-transform
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:42:59 GMT
-    body: ! '{"expand":"user","token":"PY2wAuVlJcwulTnBP5FIbQ00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/PY2wAuVlJcwulTnBP5FIbQ00","rel":"self"}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/PY2wAuVlJcwulTnBP5FIbQ00
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 204
-      message: No Content
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=B1A18D07B87E284D8C336656294181AC; Path=/crowd
-      date:
-      - Mon, 24 Oct 2011 17:42:59 GMT
-    body: !!null 
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/PY2wAuVlJcwulTnBP5FIbQ00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 404
-      message: Not Found
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=CF4BEA4A9616CFCBD6ED5A94909F1A1E; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:43:00 GMT
-    body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/P0dncW093f0cOMGCd0OG4A00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=4E1BA767A1A41ED5E73D48E52A1EC23F; Path=/crowd
-      cache-control:
-      - no-cache, no-store, no-transform
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:45:16 GMT
-    body: ! '{"expand":"user","token":"P0dncW093f0cOMGCd0OG4A00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/P0dncW093f0cOMGCd0OG4A00","rel":"self"}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/P0dncW093f0cOMGCd0OG4A00
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 204
-      message: No Content
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=A7D101ABF814F975C9012762F223CCF2; Path=/crowd
-      date:
-      - Mon, 24 Oct 2011 17:45:16 GMT
-    body: !!null 
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/P0dncW093f0cOMGCd0OG4A00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 404
-      message: Not Found
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=AC6FE680BACF3FA7A97E246C684C2F1D; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:45:16 GMT
-    body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/USsWljgK06dsd0DHDBnVMA00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=74FB1546A6B6F474085E830B9D6F973D; Path=/crowd
-      cache-control:
-      - no-cache, no-store, no-transform
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:46:16 GMT
-    body: ! '{"expand":"user","token":"USsWljgK06dsd0DHDBnVMA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/USsWljgK06dsd0DHDBnVMA00","rel":"self"}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/USsWljgK06dsd0DHDBnVMA00
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 204
-      message: No Content
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=486D79AB6412A27EAF225AA8FD0A8DAE; Path=/crowd
-      date:
-      - Mon, 24 Oct 2011 17:46:16 GMT
-    body: !!null 
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/USsWljgK06dsd0DHDBnVMA00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 404
-      message: Not Found
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=A3950A88E6EE8FC4CAFEF3AABB5C86CC; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:46:17 GMT
-    body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/group/nested
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      username:
-      - user@example.com
-      groupname:
-      - MyGroup
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 400
-      message: Bad Request
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=504AEE176C5C63D321513207BB9E55DB; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:46:48 GMT
-    body: ! '{"reason":"ILLEGAL_ARGUMENT","message":"username query parameter must
-      be given"}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XZ0sHLGWuTFoIjwNFa1eWw00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=79278EC3A1B5E22593BC068AC5370043; Path=/crowd
-      cache-control:
-      - no-cache, no-store, no-transform
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:51:35 GMT
-    body: ! '{"expand":"user","token":"XZ0sHLGWuTFoIjwNFa1eWw00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XZ0sHLGWuTFoIjwNFa1eWw00","rel":"self"}}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XZ0sHLGWuTFoIjwNFa1eWw00
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 204
-      message: No Content
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=7668AD93346DA50BC804F80498E70891; Path=/crowd
-      date:
-      - Mon, 24 Oct 2011 17:51:35 GMT
-    body: !!null 
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XZ0sHLGWuTFoIjwNFa1eWw00
-    body: ! '{}'
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      content-type:
-      - application/json
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 404
-      message: Not Found
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=32F4E96FE6D897D0D98BE42890CC6770; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 17:51:35 GMT
-    body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
     method: :post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
     body: ! '{"username":"user@example.com","password":"wrong_password"}'
@@ -669,13 +23,13 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=8377CD6C163BF4054E8B7BAE067A2C54; Path=/crowd
+      - JSESSIONID=9550A083BC145885EA625E4EA0319F28; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 17:51:58 GMT
+      - Mon, 24 Oct 2011 18:58:17 GMT
     body: ! '{"reason":"INVALID_USER_AUTHENTICATION","message":"Failed to authenticate
       principal, password was invalid"}'
     http_version: '1.1'
@@ -703,13 +57,13 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=74CD3F4173D9E523E64C021D4DB2F02F; Path=/crowd
+      - JSESSIONID=538F8C6791D51CC4B635EAF46E493691; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 17:51:58 GMT
+      - Mon, 24 Oct 2011 18:58:17 GMT
     body: ! '{"reason":"INACTIVE_ACCOUNT","message":"Account with name <inactive_user@example.com>
       is inactive"}'
     http_version: '1.1'
@@ -735,13 +89,13 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=58A2FA47A0D6E4CC8F2F5F10F9175E31; Path=/crowd
+      - JSESSIONID=1E1046E9638FBC0A227A24735412AC24; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 17:51:58 GMT
+      - Mon, 24 Oct 2011 18:58:17 GMT
     body: ! '{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup","rel":"self"},"name":"MyGroup"}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
@@ -766,15 +120,109 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=8AEE3C12707576D28A4D88339E639054; Path=/crowd
+      - JSESSIONID=5D83C50BAD0AB7EB1CD1AF59D0C3B528; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 17:51:58 GMT
+      - Mon, 24 Oct 2011 18:58:17 GMT
     body: ! '{"reason":"MEMBERSHIP_NOT_FOUND","message":"The child entity <user@example.com>
       is not a member of the parent <OtherGroup>"}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00?expand=user
+    body: !!null 
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-embedded-crowd-version:
+      - Crowd/2.3.3
+      x-crowd-user-management-version:
+      - '1.1'
+      set-cookie:
+      - JSESSIONID=157F91CED1028584293EF2E88508B6AC; Path=/crowd
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      date:
+      - Mon, 24 Oct 2011 18:58:17 GMT
+    body: ! '{"expand":"user","token":"HRz7gjbhx0vl6QnYRHKDjQ00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com","first-name":"Example","last-name":"User","display-name":"Example
+      User","email":"user@example.com","password":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com","rel":"edit"}},"active":true,"attributes":{"attributes":[],"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com","rel":"self"}}},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00","rel":"self"}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/group/nested?username=user@example.com
+    body: !!null 
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-embedded-crowd-version:
+      - Crowd/2.3.3
+      x-crowd-user-management-version:
+      - '1.1'
+      set-cookie:
+      - JSESSIONID=1D4201195A8CDA7F90F1AF4CA6442A53; Path=/crowd
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      date:
+      - Mon, 24 Oct 2011 18:58:17 GMT
+    body: ! '{"expand":"group","groups":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup","rel":"self"},"name":"MyGroup"},{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=users","rel":"self"},"name":"users"}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/group/nested?username=user@example.com
+    body: !!null 
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-embedded-crowd-version:
+      - Crowd/2.3.3
+      x-crowd-user-management-version:
+      - '1.1'
+      set-cookie:
+      - JSESSIONID=D475E1A06E78071C5AB66C48FCEBA727; Path=/crowd
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      date:
+      - Mon, 24 Oct 2011 18:58:18 GMT
+    body: ! '{"expand":"group","groups":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup","rel":"self"},"name":"MyGroup"},{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=users","rel":"self"},"name":"users"}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
@@ -800,23 +248,23 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=30FA13CD6003863CB75FF12D46496901; Path=/crowd
+      - JSESSIONID=DE53C317530856E2808D9A877345941A; Path=/crowd
       cache-control:
       - no-cache, no-store, no-transform
       location:
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/5Q4uuXK0ix464NwJOGvCbA00
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 17:51:58 GMT
-    body: ! '{"expand":"user","token":"5Q4uuXK0ix464NwJOGvCbA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/5Q4uuXK0ix464NwJOGvCbA00","rel":"self"}}'
+      - Mon, 24 Oct 2011 18:58:18 GMT
+    body: ! '{"expand":"user","token":"HRz7gjbhx0vl6QnYRHKDjQ00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00","rel":"self"}}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/5Q4uuXK0ix464NwJOGvCbA00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
     body: ! '{}'
     headers:
       accept:
@@ -837,7 +285,7 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=0AB74E9852438A71130B8A32654D9E9C; Path=/crowd
+      - JSESSIONID=8DE379BB9A6B565E8A85E42830D2C2CF; Path=/crowd
       cache-control:
       - no-cache, no-store, no-transform
       content-type:
@@ -845,13 +293,13 @@
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 17:51:58 GMT
-    body: ! '{"expand":"user","token":"5Q4uuXK0ix464NwJOGvCbA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/5Q4uuXK0ix464NwJOGvCbA00","rel":"self"}}'
+      - Mon, 24 Oct 2011 18:58:18 GMT
+    body: ! '{"expand":"user","token":"HRz7gjbhx0vl6QnYRHKDjQ00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00","rel":"self"}}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/5Q4uuXK0ix464NwJOGvCbA00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
     body: !!null 
     headers:
       accept:
@@ -870,15 +318,15 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=7CDAA352345E3E0B63CC6A16541A0EA4; Path=/crowd
+      - JSESSIONID=4D3AE20269AFC73F3A063B8C3A47CF83; Path=/crowd
       date:
-      - Mon, 24 Oct 2011 17:51:59 GMT
+      - Mon, 24 Oct 2011 18:58:18 GMT
     body: !!null 
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/5Q4uuXK0ix464NwJOGvCbA00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
     body: ! '{}'
     headers:
       accept:
@@ -899,12 +347,12 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=5A5987F464ACACD1EAD53BA8CAC76158; Path=/crowd
+      - JSESSIONID=8F33832C59536DAB7933396D8D953BC5; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 17:51:59 GMT
+      - Mon, 24 Oct 2011 18:58:18 GMT
     body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
     http_version: '1.1'
