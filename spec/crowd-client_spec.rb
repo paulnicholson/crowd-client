@@ -55,8 +55,11 @@ describe Crowd::Client do
 
   describe "#user_groups(username)" do
     it "should return the groups of the user" do
-      subject.user_groups('user@example.com').should include('MyGroup')
-      subject.user_groups('user@example.com').should_not include('OtherGroup')
+      group_names = subject.user_groups('user@example.com').collect{|group| group['name']}
+      group_names.size.should == 2
+      group_names.should include('users')
+      group_names.should include('MyGroup')
+      group_names.should_not include('OtherGroup')
     end
   end
 

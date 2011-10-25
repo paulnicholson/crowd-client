@@ -50,7 +50,7 @@ module Crowd
       response = connection.get("user/group/nested") do |request|
         request.params[:username] = username
       end
-      response.body['groups'].collect{|group| group['name']}
+      response.body['groups']
     end
 
     def in_group?(username, group_name)
