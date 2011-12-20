@@ -1,0 +1,98 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup
+    body: ! '{"name":"fake"}'
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-embedded-crowd-version:
+      - Crowd/2.3.3
+      x-crowd-user-management-version:
+      - '1.1'
+      set-cookie:
+      - JSESSIONID=185D38FAB50FD1D4C9E20BCA46857A58; Path=/crowd
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      date:
+      - Tue, 20 Dec 2011 23:11:36 GMT
+    body: ! '{"reason":"USER_NOT_FOUND","message":"User <fake> does not exist"}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=FakeGroup
+    body: ! '{"name":"user@example.com"}'
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      content-type:
+      - application/json
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: Not Found
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-embedded-crowd-version:
+      - Crowd/2.3.3
+      x-crowd-user-management-version:
+      - '1.1'
+      set-cookie:
+      - JSESSIONID=12975AB1B4952ED76BE87FE322DC7897; Path=/crowd
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      date:
+      - Tue, 20 Dec 2011 23:11:36 GMT
+    body: ! '{"reason":"GROUP_NOT_FOUND","message":"Group <FakeGroup> does not exist"}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/nested?groupname=MyGroup
+    body: !!null 
+    headers:
+      accept:
+      - application/json
+      authorization:
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      x-embedded-crowd-version:
+      - Crowd/2.3.3
+      x-crowd-user-management-version:
+      - '1.1'
+      set-cookie:
+      - JSESSIONID=2C33CE4ED48E122E67D949109E820412; Path=/crowd
+      content-type:
+      - application/json
+      transfer-encoding:
+      - chunked
+      date:
+      - Tue, 20 Dec 2011 23:11:36 GMT
+    body: ! '{"expand":"user","users":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"}]}'
+    http_version: '1.1'

@@ -23,13 +23,13 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=9550A083BC145885EA625E4EA0319F28; Path=/crowd
+      - JSESSIONID=37FED7E33B513A5F1CC987A2EF53D376; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:17 GMT
+      - Tue, 20 Dec 2011 23:11:36 GMT
     body: ! '{"reason":"INVALID_USER_AUTHENTICATION","message":"Failed to authenticate
       principal, password was invalid"}'
     http_version: '1.1'
@@ -57,13 +57,13 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=538F8C6791D51CC4B635EAF46E493691; Path=/crowd
+      - JSESSIONID=1C3A7BC7272B30EC212D5C09A6709DE9; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:17 GMT
+      - Tue, 20 Dec 2011 23:11:36 GMT
     body: ! '{"reason":"INACTIVE_ACCOUNT","message":"Account with name <inactive_user@example.com>
       is inactive"}'
     http_version: '1.1'
@@ -89,13 +89,13 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=1E1046E9638FBC0A227A24735412AC24; Path=/crowd
+      - JSESSIONID=940120055B2D6769F24CF4EE84A730B2; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:17 GMT
+      - Tue, 20 Dec 2011 23:11:36 GMT
     body: ! '{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup","rel":"self"},"name":"MyGroup"}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
@@ -120,20 +120,20 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=5D83C50BAD0AB7EB1CD1AF59D0C3B528; Path=/crowd
+      - JSESSIONID=97AC355A0CD64907432443711698FD4B; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:17 GMT
+      - Tue, 20 Dec 2011 23:11:36 GMT
     body: ! '{"reason":"MEMBERSHIP_NOT_FOUND","message":"The child entity <user@example.com>
       is not a member of the parent <OtherGroup>"}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00?expand=user
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00?expand=user
     body: !!null 
     headers:
       accept:
@@ -152,15 +152,15 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=157F91CED1028584293EF2E88508B6AC; Path=/crowd
+      - JSESSIONID=18145B8884C3EA63A65F8954BAEC4624; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:17 GMT
-    body: ! '{"expand":"user","token":"HRz7gjbhx0vl6QnYRHKDjQ00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com","first-name":"Example","last-name":"User","display-name":"Example
-      User","email":"user@example.com","password":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com","rel":"edit"}},"active":true,"attributes":{"attributes":[],"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com","rel":"self"}}},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00","rel":"self"}}'
+      - Tue, 20 Dec 2011 23:11:36 GMT
+    body: ! '{"expand":"user","token":"2lb5zatk1T7Q25Xibx0qVA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com","first-name":"Example","last-name":"User","display-name":"Example
+      User","email":"user@example.com","password":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com","rel":"edit"}},"active":true,"attributes":{"attributes":[],"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com","rel":"self"}}},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00","rel":"self"}}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
@@ -184,44 +184,13 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=1D4201195A8CDA7F90F1AF4CA6442A53; Path=/crowd
+      - JSESSIONID=558E365B331CECA0478570DCB73A2970; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:17 GMT
-    body: ! '{"expand":"group","groups":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup","rel":"self"},"name":"MyGroup"},{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=users","rel":"self"},"name":"users"}]}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/group/nested?username=user@example.com
-    body: !!null 
-    headers:
-      accept:
-      - application/json
-      authorization:
-      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - Apache-Coyote/1.1
-      x-embedded-crowd-version:
-      - Crowd/2.3.3
-      x-crowd-user-management-version:
-      - '1.1'
-      set-cookie:
-      - JSESSIONID=D475E1A06E78071C5AB66C48FCEBA727; Path=/crowd
-      content-type:
-      - application/json
-      transfer-encoding:
-      - chunked
-      date:
-      - Mon, 24 Oct 2011 18:58:18 GMT
+      - Tue, 20 Dec 2011 23:11:36 GMT
     body: ! '{"expand":"group","groups":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup","rel":"self"},"name":"MyGroup"},{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=users","rel":"self"},"name":"users"}]}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
@@ -248,23 +217,23 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=DE53C317530856E2808D9A877345941A; Path=/crowd
+      - JSESSIONID=9B7B15531715698D04FD919E1A93058C; Path=/crowd
       cache-control:
       - no-cache, no-store, no-transform
       location:
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:18 GMT
-    body: ! '{"expand":"user","token":"HRz7gjbhx0vl6QnYRHKDjQ00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00","rel":"self"}}'
+      - Tue, 20 Dec 2011 23:11:37 GMT
+    body: ! '{"expand":"user","token":"2lb5zatk1T7Q25Xibx0qVA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00","rel":"self"}}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00
     body: ! '{}'
     headers:
       accept:
@@ -285,7 +254,7 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=8DE379BB9A6B565E8A85E42830D2C2CF; Path=/crowd
+      - JSESSIONID=5A935AF11EC4D515126F2E2FF4900C7A; Path=/crowd
       cache-control:
       - no-cache, no-store, no-transform
       content-type:
@@ -293,13 +262,13 @@
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:18 GMT
-    body: ! '{"expand":"user","token":"HRz7gjbhx0vl6QnYRHKDjQ00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00","rel":"self"}}'
+      - Tue, 20 Dec 2011 23:11:37 GMT
+    body: ! '{"expand":"user","token":"2lb5zatk1T7Q25Xibx0qVA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00","rel":"self"}}'
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00
     body: !!null 
     headers:
       accept:
@@ -318,15 +287,15 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=4D3AE20269AFC73F3A063B8C3A47CF83; Path=/crowd
+      - JSESSIONID=593CEDE188B0358B2E3F65B746D4DE05; Path=/crowd
       date:
-      - Mon, 24 Oct 2011 18:58:18 GMT
+      - Tue, 20 Dec 2011 23:11:37 GMT
     body: !!null 
     http_version: '1.1'
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/HRz7gjbhx0vl6QnYRHKDjQ00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/2lb5zatk1T7Q25Xibx0qVA00
     body: ! '{}'
     headers:
       accept:
@@ -347,12 +316,12 @@
       x-crowd-user-management-version:
       - '1.1'
       set-cookie:
-      - JSESSIONID=8F33832C59536DAB7933396D8D953BC5; Path=/crowd
+      - JSESSIONID=06E4BACA322EB7BDFD726B1A6EFE07D7; Path=/crowd
       content-type:
       - application/json
       transfer-encoding:
       - chunked
       date:
-      - Mon, 24 Oct 2011 18:58:18 GMT
+      - Tue, 20 Dec 2011 23:11:37 GMT
     body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
     http_version: '1.1'

@@ -26,4 +26,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "faraday_middleware", "~> 0.7.0"
   s.add_runtime_dependency "patron", "~> 0.4.16"
   s.add_runtime_dependency "json", "~> 1.6.1"
+  s.add_runtime_dependency "activesupport", "~> 3.1.0"
 end

@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../lib/crowd-client')
 
 describe Crowd::Client do
 
-  use_vcr_cassette
+  use_vcr_cassette #:record => :all
 
   describe "#config" do
     subject { Crowd::Client.config }
@@ -64,7 +64,6 @@ describe Crowd::Client do
   end
 
   describe "#logout" do
-
     it "should logout the current session" do
       token = subject.login('user@example.com', 'password')
       subject.valid_session?(token).should be_true
