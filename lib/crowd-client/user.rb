@@ -7,7 +7,7 @@ class Crowd::Client::User
     self.username = username
     self.new_record = true
     attributes && attributes.each do |k,v|
-      respond_to?(:"#{k}=") ? send(:"#{k}=", v) : write_attribute(k.to_s.gsub(/[_ ]/, '-'), v)
+      respond_to?(:"#{k}=", true) ? send(:"#{k}=", v) : write_attribute(k.to_s.gsub(/[_ ]/, '-'), v)
     end
   end
 
@@ -25,10 +25,6 @@ class Crowd::Client::User
 
   def email
     user_attributes['email']
-  end
-
-  def password=(password)
-    write_attribute :password, {:value => password }
   end
 
   def groups(reload=false)
@@ -49,7 +45,7 @@ class Crowd::Client::User
 
   def save
     return unless new_record
-    response = connection.post('user', {'name' => username}.merge(@attributes))
+    response = connection.post('user', {'name' => username, 'active' => true}.merge(@attributes))
     self.new_record = false
     raise ::Crowd::Client::Exception::UnknownError if response.status != 201
   end
@@ -62,9 +58,28 @@ class Crowd::Client::User
     raise ::Crowd::Client::Exception::UnknownError if response.status != 204
   end
 
+  def authenticate?(password)
+    response = connection.post('authentication', :value => password) do |request|
+      request.params[:username] = username
+    end
+    response.status == 200
+  end
+
+  def change_password(password)
+    response = connection.put('user/password', :value => password) do |request|
+      request.params[:username] = username
+    end
+    raise ::Crowd::Client::Exception::NotFound.new("User '#{user.username}' was not found") if response.status == 404
+    raise ::Crowd::Client::Exception::UnknownError if response.status != 204
+  end
+
   private
     def connection
       ::Crowd::Client.connection
+    end
+
+    def password=(password)
+      write_attribute :password, {:value => password }
     end
 
     def write_attribute(attribute, value)

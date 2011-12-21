@@ -3,7 +3,7 @@ http_interactions:
 - request: 
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user
-    body: "{\"name\":\"group_removal@example.com\",\"password\":{\"value\":\"test\"},\"first-name\":\"Group\",\"last-name\":\"Removal\",\"email\":\"group_removal@example.com\"}"
+    body: "{\"name\":\"group_removal@example.com\",\"active\":true,\"password\":{\"value\":\"test\"},\"first-name\":\"Group\",\"last-name\":\"Removal\",\"email\":\"group_removal@example.com\"}"
     headers: 
       Accept: 
       - application/json
@@ -25,7 +25,7 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=BF54EE0679CCBCA7019170F66697CFA7; Path=/crowd
+      - JSESSIONID=B51AF935567ADED0FD71ECA466A6184F; Path=/crowd
       Location: 
       - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_removal@example.com
       Content-Type: 
@@ -33,10 +33,10 @@ http_interactions:
       Content-Length: 
       - "0"
       Date: 
-      - Wed, 21 Dec 2011 18:14:31 GMT
+      - Wed, 21 Dec 2011 20:18:59 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:32 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
 - request: 
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup
@@ -62,7 +62,7 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=58815D0A7A6F2CB39A2EF2CD5ED9CF6C; Path=/crowd
+      - JSESSIONID=0AF72FF12676E983DB9C769B5FFFCC62; Path=/crowd
       Location: 
       - http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup&username=group_removal@example.com
       Content-Type: 
@@ -70,10 +70,10 @@ http_interactions:
       Content-Length: 
       - "0"
       Date: 
-      - Wed, 21 Dec 2011 18:14:31 GMT
+      - Wed, 21 Dec 2011 20:18:59 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:32 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
 - request: 
     method: delete
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup&username=group_removal@example.com
@@ -97,12 +97,12 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=04DC66EB1A978B5520A1BEFBEAE269FD; Path=/crowd
+      - JSESSIONID=DF7B633543F5CDBA42663C9B799ACB7D; Path=/crowd
       Date: 
-      - Wed, 21 Dec 2011 18:14:31 GMT
+      - Wed, 21 Dec 2011 20:18:59 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:32 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
 - request: 
     method: get
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/nested?groupname=MyGroup
@@ -126,16 +126,16 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=E30E10CDF578C5333FEB811A62140337; Path=/crowd
+      - JSESSIONID=64E68EA5666248813263EE33DF034318; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 18:14:31 GMT
+      - Wed, 21 Dec 2011 20:18:59 GMT
     body: "{\"expand\":\"user\",\"users\":[{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"}]}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:32 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
 - request: 
     method: delete
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_removal@example.com
@@ -159,10 +159,10 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=88B30519C4A3869C7D15C42D87F78B06; Path=/crowd
+      - JSESSIONID=BAAA9F39C3442ACB85356DE0F29516D1; Path=/crowd
       Date: 
-      - Wed, 21 Dec 2011 18:14:31 GMT
+      - Wed, 21 Dec 2011 20:18:59 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:32 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
 recorded_with: VCR 2.0.0.rc1

@@ -26,6 +26,28 @@ describe Crowd::Client::User do
     end
   end
 
+  describe "authenticate" do
+    it "should return true if the password is valid" do
+      subject.authenticate?('password').should be_true
+    end
+
+    it "should return false if the password is invalid" do
+      subject.authenticate?('invalid').should be_false
+    end
+  end
+
+
+  describe "change password" do
+    before { @user = Crowd::Client::User.create :username => 'change_pass@example.com', :password => 'test', :first_name => 'Change', :last_name => 'Me', :email => 'change_pass@example.com' }
+    after { @user.destroy }
+    subject { @user }
+    it "should allow the user to set a new password" do
+      subject.change_password 'new_password'
+      subject.authenticate?('new_password').should be_true
+    end
+  end
+
+
   describe "#destroy" do
     before do
       Crowd::Client::User.create :username => 'delete@example.com', :password => 'test', :first_name => 'Delete', :last_name => 'Me', :email => 'delete@example.com'

@@ -23,14 +23,14 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=9CAA0B692C7B2892266FB33F59BF465B; Path=/crowd
+      - JSESSIONID=5793613E60294E6368F061F63B8538A8; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 18:14:32 GMT
+      - Wed, 21 Dec 2011 20:19:00 GMT
     body: "{\"expand\":\"attributes\",\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\",\"first-name\":\"Example\",\"last-name\":\"User\",\"display-name\":\"Example User\",\"email\":\"user@example.com\",\"password\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com\",\"rel\":\"edit\"}},\"active\":true,\"attributes\":{\"attributes\":[],\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com\",\"rel\":\"self\"}}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
 recorded_with: VCR 2.0.0.rc1

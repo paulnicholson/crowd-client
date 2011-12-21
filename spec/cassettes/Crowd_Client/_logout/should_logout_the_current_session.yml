@@ -25,23 +25,23 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=EECAC2070E46825E761BA949947BE3DB; Path=/crowd
+      - JSESSIONID=C1EE3BEAEFFAD29294C13C6C914AE2FD; Path=/crowd
       Cache-Control: 
       - no-cache, no-store, no-transform
       Location: 
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 18:14:32 GMT
-    body: "{\"expand\":\"user\",\"token\":\"YGoYwZD2yNAglEnV5LI0kQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00\",\"rel\":\"self\"}}"
+      - Wed, 21 Dec 2011 20:19:00 GMT
+    body: "{\"expand\":\"user\",\"token\":\"CFR8rIt6TfAXgjfM6rahMQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00\",\"rel\":\"self\"}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
 - request: 
     method: post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00
     body: "{}"
     headers: 
       Accept: 
@@ -64,7 +64,7 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=2EEBCD1C1EA4A5EE925F2D4E6875A564; Path=/crowd
+      - JSESSIONID=1EC29B9771A24D0B5C1EB6D7DB000C47; Path=/crowd
       Cache-Control: 
       - no-cache, no-store, no-transform
       Content-Type: 
@@ -72,13 +72,13 @@ http_interactions:
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 18:14:32 GMT
-    body: "{\"expand\":\"user\",\"token\":\"YGoYwZD2yNAglEnV5LI0kQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00\",\"rel\":\"self\"}}"
+      - Wed, 21 Dec 2011 20:19:00 GMT
+    body: "{\"expand\":\"user\",\"token\":\"CFR8rIt6TfAXgjfM6rahMQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00\",\"rel\":\"self\"}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
 - request: 
     method: delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00
     body: ""
     headers: 
       Accept: 
@@ -99,15 +99,15 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=AD22244A7389EDDAC10A6F74344F65B1; Path=/crowd
+      - JSESSIONID=4C251465C3B05EF70054E73495B39ECE; Path=/crowd
       Date: 
-      - Wed, 21 Dec 2011 18:14:32 GMT
+      - Wed, 21 Dec 2011 20:19:00 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
 - request: 
     method: post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00
     body: "{}"
     headers: 
       Accept: 
@@ -130,14 +130,14 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=FC7A23639A54785499E86387B4839733; Path=/crowd
+      - JSESSIONID=B7C4F6234A76289530EF98EDECB2C598; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 18:14:32 GMT
+      - Wed, 21 Dec 2011 20:19:00 GMT
     body: "{\"reason\":\"INVALID_SSO_TOKEN\",\"message\":\"Token does not validate.\"}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
 recorded_with: VCR 2.0.0.rc1

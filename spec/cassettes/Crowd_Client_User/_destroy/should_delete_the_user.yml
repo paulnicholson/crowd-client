@@ -3,7 +3,7 @@ http_interactions:
 - request: 
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user
-    body: "{\"name\":\"delete@example.com\",\"password\":{\"value\":\"test\"},\"first-name\":\"Delete\",\"last-name\":\"Me\",\"email\":\"delete@example.com\"}"
+    body: "{\"name\":\"delete@example.com\",\"active\":true,\"password\":{\"value\":\"test\"},\"first-name\":\"Delete\",\"last-name\":\"Me\",\"email\":\"delete@example.com\"}"
     headers: 
       Accept: 
       - application/json
@@ -25,7 +25,7 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=C163102A8EEE9188B190E90656425D65; Path=/crowd
+      - JSESSIONID=638690CC7AEADF41EEC05CF8042C9A6E; Path=/crowd
       Location: 
       - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=delete@example.com
       Content-Type: 
@@ -33,10 +33,10 @@ http_interactions:
       Content-Length: 
       - "0"
       Date: 
-      - Wed, 21 Dec 2011 18:14:33 GMT
+      - Wed, 21 Dec 2011 20:19:01 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:34 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:02 GMT
 - request: 
     method: delete
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=delete@example.com
@@ -60,12 +60,12 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=E2AAB293F12E145949D80F46A8C55504; Path=/crowd
+      - JSESSIONID=30A1CBDC1528EA95C0633FB1B63CB66C; Path=/crowd
       Date: 
-      - Wed, 21 Dec 2011 18:14:33 GMT
+      - Wed, 21 Dec 2011 20:19:02 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:34 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:02 GMT
 - request: 
     method: get
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=delete@example.com
@@ -89,14 +89,14 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=3764C97CB6937288363E51D877AD2F7A; Path=/crowd
+      - JSESSIONID=F84CA523076F2EE3BC3468E6FCE43934; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 18:14:33 GMT
+      - Wed, 21 Dec 2011 20:19:02 GMT
     body: "{\"reason\":\"USER_NOT_FOUND\",\"message\":\"User <delete@example.com> does not exist\"}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 18:14:34 GMT
+  recorded_at: Wed, 21 Dec 2011 20:19:03 GMT
 recorded_with: VCR 2.0.0.rc1
