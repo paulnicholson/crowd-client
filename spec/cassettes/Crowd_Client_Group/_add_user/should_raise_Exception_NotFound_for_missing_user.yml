@@ -1,0 +1,106 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user
+    body: "{\"name\":\"group_add@example.com\",\"password\":{\"value\":\"test\"},\"first-name\":\"Group\",\"last-name\":\"Add\",\"email\":\"group_add@example.com\"}"
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Content-Type: 
+      - application/json
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 201
+      message: Created
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=043F427DFD00F0AC6FE0D465D2B5AC86; Path=/crowd
+      Location: 
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
+      Content-Type: 
+      - application/json
+      Content-Length: 
+      - "0"
+      Date: 
+      - Wed, 21 Dec 2011 18:14:31 GMT
+    body: ""
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:31 GMT
+- request: 
+    method: post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup
+    body: "{\"name\":\"fake\"}"
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Content-Type: 
+      - application/json
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 400
+      message: Bad Request
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=72DA984DE4C7E43E91758423A2C549D8; Path=/crowd
+      Content-Type: 
+      - application/json
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 21 Dec 2011 18:14:31 GMT
+      Connection: 
+      - close
+    body: "{\"reason\":\"USER_NOT_FOUND\",\"message\":\"User <fake> does not exist\"}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:31 GMT
+- request: 
+    method: delete
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
+    body: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 204
+      message: No Content
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=185E6BB85EDBDEAB0B3107BDCFE91B07; Path=/crowd
+      Date: 
+      - Wed, 21 Dec 2011 18:14:31 GMT
+    body: ""
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:31 GMT
+recorded_with: VCR 2.0.0.rc1

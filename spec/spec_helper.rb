@@ -3,9 +3,9 @@
 require 'vcr'
 Dir[File.join(File.dirname(__FILE__), "spec/support/**/*.rb")].each {|f| require f}
 
-VCR.config do |c|
+VCR.configure do |c|
   c.cassette_library_dir     = 'spec/cassettes'
-  c.stub_with                :webmock
+  c.hook_into                :webmock
   c.default_cassette_options = { :record => :new_episodes, :match_requests_on => [:method, :uri, :body]}
 end
 
@@ -20,4 +20,18 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.extend VCR::RSpec::Macros
 
+  vcr_cassette_name_for = lambda do |metadata|
+    description = metadata[:description]
+
+    if example_group = metadata[:example_group]
+      [vcr_cassette_name_for[example_group], description].join('/')
+    else
+      description
+    end
+  end
+
+  config.around(:each) do |example|
+    cassette_name = vcr_cassette_name_for[example.metadata]
+    VCR.use_cassette(cassette_name, &example)
+  end
 end

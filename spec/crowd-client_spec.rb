@@ -3,8 +3,6 @@ require File.expand_path(File.dirname(__FILE__) + '/../lib/crowd-client')
 
 describe Crowd::Client do
 
-  use_vcr_cassette #:record => :all
-
   describe "#config" do
     subject { Crowd::Client.config }
 

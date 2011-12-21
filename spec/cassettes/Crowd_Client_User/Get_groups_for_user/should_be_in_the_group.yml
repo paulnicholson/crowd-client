@@ -1,0 +1,36 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/group/nested?username=user@example.com
+    body: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=8A2525A087A84F43A7D35DACF47493D1; Path=/crowd
+      Content-Type: 
+      - application/json
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 21 Dec 2011 18:14:33 GMT
+    body: "{\"expand\":\"group\",\"groups\":[{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup\",\"rel\":\"self\"},\"name\":\"MyGroup\"},{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=users\",\"rel\":\"self\"},\"name\":\"users\"}]}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+recorded_with: VCR 2.0.0.rc1

@@ -1,0 +1,40 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
+    body: "{\"username\":\"user@example.com\",\"password\":\"wrong_password\"}"
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Content-Type: 
+      - application/json
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 400
+      message: Bad Request
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=EA26AB8297F3554C04FCBDD750AC5BD0; Path=/crowd
+      Content-Type: 
+      - application/json
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 21 Dec 2011 18:14:32 GMT
+      Connection: 
+      - close
+    body: "{\"reason\":\"INVALID_USER_AUTHENTICATION\",\"message\":\"Failed to authenticate principal, password was invalid\"}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:32 GMT
+recorded_with: VCR 2.0.0.rc1

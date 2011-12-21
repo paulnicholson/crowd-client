@@ -1,0 +1,139 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user
+    body: "{\"name\":\"group_add@example.com\",\"password\":{\"value\":\"test\"},\"first-name\":\"Group\",\"last-name\":\"Add\",\"email\":\"group_add@example.com\"}"
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Content-Type: 
+      - application/json
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 201
+      message: Created
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=AF32330080E693DA25F83C4FFA05BA93; Path=/crowd
+      Location: 
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
+      Content-Type: 
+      - application/json
+      Content-Length: 
+      - "0"
+      Date: 
+      - Wed, 21 Dec 2011 18:14:31 GMT
+    body: ""
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:31 GMT
+- request: 
+    method: post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup
+    body: "{\"name\":\"group_add@example.com\"}"
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Content-Type: 
+      - application/json
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 201
+      message: Created
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=DAF672CD275F37FA06AB458536442274; Path=/crowd
+      Location: 
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup&username=group_add@example.com
+      Content-Type: 
+      - application/json
+      Content-Length: 
+      - "0"
+      Date: 
+      - Wed, 21 Dec 2011 18:14:31 GMT
+    body: ""
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:31 GMT
+- request: 
+    method: get
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/nested?groupname=MyGroup
+    body: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=51FF21159201959CA216812B95949DC4; Path=/crowd
+      Content-Type: 
+      - application/json
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 21 Dec 2011 18:14:31 GMT
+    body: "{\"expand\":\"user\",\"users\":[{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com\",\"rel\":\"self\"},\"name\":\"group_add@example.com\"},{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"}]}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:31 GMT
+- request: 
+    method: delete
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
+    body: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 204
+      message: No Content
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=FE8C95CE7BBA15D6A593A72F042F7993; Path=/crowd
+      Date: 
+      - Wed, 21 Dec 2011 18:14:31 GMT
+    body: ""
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:31 GMT
+recorded_with: VCR 2.0.0.rc1

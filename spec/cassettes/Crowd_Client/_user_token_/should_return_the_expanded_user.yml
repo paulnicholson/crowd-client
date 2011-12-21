@@ -1,0 +1,75 @@
+--- 
+http_interactions: 
+- request: 
+    method: post
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
+    body: "{\"username\":\"user@example.com\",\"password\":\"password\"}"
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Content-Type: 
+      - application/json
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 201
+      message: Created
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=61C2550D0FD56D0FBC86F85F5D2EB034; Path=/crowd
+      Cache-Control: 
+      - no-cache, no-store, no-transform
+      Location: 
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00
+      Content-Type: 
+      - application/json
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 21 Dec 2011 18:14:32 GMT
+    body: "{\"expand\":\"user\",\"token\":\"YGoYwZD2yNAglEnV5LI0kQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00\",\"rel\":\"self\"}}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+- request: 
+    method: get
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00?expand=user
+    body: ""
+    headers: 
+      Accept: 
+      - application/json
+      Authorization: 
+      - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
+      Expect: 
+      - ""
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version: 
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version: 
+      - "1.1"
+      Set-Cookie: 
+      - JSESSIONID=534A72AE24EEF920D54E1AF1B8E36CD3; Path=/crowd
+      Content-Type: 
+      - application/json
+      Transfer-Encoding: 
+      - chunked
+      Date: 
+      - Wed, 21 Dec 2011 18:14:32 GMT
+    body: "{\"expand\":\"user\",\"token\":\"YGoYwZD2yNAglEnV5LI0kQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\",\"first-name\":\"Example\",\"last-name\":\"User\",\"display-name\":\"Example User\",\"email\":\"user@example.com\",\"password\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com\",\"rel\":\"edit\"}},\"active\":true,\"attributes\":{\"attributes\":[],\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com\",\"rel\":\"self\"}}},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/YGoYwZD2yNAglEnV5LI0kQ00\",\"rel\":\"self\"}}"
+    http_version: 
+  recorded_at: Wed, 21 Dec 2011 18:14:33 GMT
+recorded_with: VCR 2.0.0.rc1

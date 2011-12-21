@@ -3,8 +3,6 @@ require File.expand_path(File.dirname(__FILE__) + '/../lib/crowd-client/user')
 
 describe Crowd::Client::User do
 
-  use_vcr_cassette
-
   subject { Crowd::Client::User.new('user@example.com') }
 
   its(:username) { should == 'user@example.com' }

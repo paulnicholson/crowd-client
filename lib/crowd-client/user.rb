@@ -15,6 +15,10 @@ class Crowd::Client::User
     new('', attributes).tap {|user| user.save }
   end
 
+  def ==(other)
+    username == (other && other.username)
+  end
+
   def display_name
     user_attributes['display-name']
   end
