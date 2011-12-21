@@ -25,16 +25,16 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=D94075BBDB7C4BAD7E35C637B75D749A; Path=/crowd
+      - JSESSIONID=8EF3BF87966D0AAD2A59EBBD027C6BBA; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:19:00 GMT
+      - Wed, 21 Dec 2011 20:57:00 GMT
       Connection: 
       - close
     body: "{\"reason\":\"INVALID_USER_AUTHENTICATION\",\"message\":\"Failed to authenticate principal, password was invalid\"}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
 recorded_with: VCR 2.0.0.rc1

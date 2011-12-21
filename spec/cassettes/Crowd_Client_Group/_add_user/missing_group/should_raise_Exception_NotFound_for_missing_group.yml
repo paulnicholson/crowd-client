@@ -25,7 +25,7 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=829109DF74923027C9DDED1ADEC9120B; Path=/crowd
+      - JSESSIONID=A7A8118996BE4B4BAD17D034153E43AB; Path=/crowd
       Location: 
       - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
       Content-Type: 
@@ -33,10 +33,10 @@ http_interactions:
       Content-Length: 
       - "0"
       Date: 
-      - Wed, 21 Dec 2011 20:18:59 GMT
+      - Wed, 21 Dec 2011 20:56:59 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
 - request: 
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=FakeGroup
@@ -62,16 +62,16 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=D89B98911B64E7E35820F44ECDB005BA; Path=/crowd
+      - JSESSIONID=7E84F240BA6301AA7C247CC8535153C6; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:18:59 GMT
+      - Wed, 21 Dec 2011 20:56:59 GMT
     body: "{\"reason\":\"GROUP_NOT_FOUND\",\"message\":\"Group <FakeGroup> does not exist\"}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
 - request: 
     method: delete
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
@@ -95,10 +95,10 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=E94D2E81B4E568D802FC85B6EE9AE5D2; Path=/crowd
+      - JSESSIONID=EA8822C0DBA88C9324B76799E9CBC890; Path=/crowd
       Date: 
-      - Wed, 21 Dec 2011 20:18:59 GMT
+      - Wed, 21 Dec 2011 20:56:59 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:00 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
 recorded_with: VCR 2.0.0.rc1

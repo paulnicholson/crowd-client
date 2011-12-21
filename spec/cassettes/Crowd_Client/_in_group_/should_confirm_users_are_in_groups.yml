@@ -23,16 +23,16 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=F941C95B42A44C4AEECA389551376B4A; Path=/crowd
+      - JSESSIONID=FCB1D9B970C02C9494B00569525DB4E4; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:19:00 GMT
+      - Wed, 21 Dec 2011 20:57:00 GMT
     body: "{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/group?groupname=MyGroup\",\"rel\":\"self\"},\"name\":\"MyGroup\"}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
 - request: 
     method: get
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/group/nested?groupname=OtherGroup&username=user@example.com
@@ -56,14 +56,14 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=5A4247C3087E43E18284B661FC866E22; Path=/crowd
+      - JSESSIONID=45B66E5CEDDE4E9E277EE77751E4A460; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:19:00 GMT
+      - Wed, 21 Dec 2011 20:57:00 GMT
     body: "{\"reason\":\"MEMBERSHIP_NOT_FOUND\",\"message\":\"The child entity <user@example.com> is not a member of the parent <OtherGroup>\"}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
 recorded_with: VCR 2.0.0.rc1

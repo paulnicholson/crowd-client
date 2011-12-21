@@ -25,23 +25,23 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=9EBA7241481AAF13E71A486502967983; Path=/crowd
+      - JSESSIONID=BB2640BF87D8BB482B40BDEDE8897CE0; Path=/crowd
       Cache-Control: 
       - no-cache, no-store, no-transform
       Location: 
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:19:00 GMT
-    body: "{\"expand\":\"user\",\"token\":\"CFR8rIt6TfAXgjfM6rahMQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00\",\"rel\":\"self\"}}"
+      - Wed, 21 Dec 2011 20:57:00 GMT
+    body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
 - request: 
     method: get
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00?expand=user
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00?expand=user
     body: ""
     headers: 
       Accept: 
@@ -62,14 +62,14 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=97F2D1A35A5F305A51449A9195D914D4; Path=/crowd
+      - JSESSIONID=2F1A330F8CA7E54C49FE8DE303382404; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:19:00 GMT
-    body: "{\"expand\":\"user\",\"token\":\"CFR8rIt6TfAXgjfM6rahMQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\",\"first-name\":\"Example\",\"last-name\":\"User\",\"display-name\":\"Example User\",\"email\":\"user@example.com\",\"password\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com\",\"rel\":\"edit\"}},\"active\":true,\"attributes\":{\"attributes\":[],\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com\",\"rel\":\"self\"}}},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00\",\"rel\":\"self\"}}"
+      - Wed, 21 Dec 2011 20:57:00 GMT
+    body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\",\"first-name\":\"Example\",\"last-name\":\"User\",\"display-name\":\"Example User\",\"email\":\"user@example.com\",\"password\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com\",\"rel\":\"edit\"}},\"active\":true,\"attributes\":{\"attributes\":[],\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com\",\"rel\":\"self\"}}},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
 recorded_with: VCR 2.0.0.rc1

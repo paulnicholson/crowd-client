@@ -3,7 +3,7 @@ http_interactions:
 - request: 
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user
-    body: "{\"name\":\"group_add@example.com\",\"active\":true,\"password\":{\"value\":\"test\"},\"first-name\":\"Group\",\"last-name\":\"Add\",\"email\":\"group_add@example.com\"}"
+    body: "{\"name\":\"change_user@example.com\",\"active\":true,\"password\":{\"value\":\"test\"},\"first-name\":\"Change\",\"last-name\":\"User\",\"email\":\"change_user@example.com\"}"
     headers: 
       Accept: 
       - application/json
@@ -25,22 +25,22 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=A7EDC3C42E7B3B2C39563999A7A06DFC; Path=/crowd
+      - JSESSIONID=6E2CA4931A19506C1FC090C59D01FF91; Path=/crowd
       Location: 
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=change_user@example.com
       Content-Type: 
       - application/json
       Content-Length: 
       - "0"
       Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
+      - Wed, 21 Dec 2011 20:57:01 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:02 GMT
 - request: 
-    method: post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup
-    body: "{\"name\":\"group_add@example.com\"}"
+    method: put
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=change_user@example.com
+    body: "{\"name\":\"change_user@example.com\",\"password\":{\"value\":\"test\"},\"first-name\":\"New First\",\"last-name\":\"And Last Name\",\"email\":\"change_user@example.com\"}"
     headers: 
       Accept: 
       - application/json
@@ -52,8 +52,8 @@ http_interactions:
       - ""
   response: 
     status: 
-      code: 201
-      message: Created
+      code: 204
+      message: No Content
     headers: 
       Server: 
       - Apache-Coyote/1.1
@@ -62,21 +62,15 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=25B78F520DC2777DFB390EAB8AE9F8B5; Path=/crowd
-      Location: 
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup&username=group_add@example.com
-      Content-Type: 
-      - application/json
-      Content-Length: 
-      - "0"
+      - JSESSIONID=B91BB20D5DAB4970119A3B5F7FBA9F92; Path=/crowd
       Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
+      - Wed, 21 Dec 2011 20:57:01 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:02 GMT
 - request: 
     method: get
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/nested?groupname=MyGroup
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=change_user@example.com
     body: ""
     headers: 
       Accept: 
@@ -97,19 +91,19 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=79EBB59CD9A9AC93B34E8C0FE0F03541; Path=/crowd
+      - JSESSIONID=3ADB9EE6A7164D0822F3D734567458E0; Path=/crowd
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
-    body: "{\"expand\":\"user\",\"users\":[{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com\",\"rel\":\"self\"},\"name\":\"group_add@example.com\"},{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"}]}"
+      - Wed, 21 Dec 2011 20:57:01 GMT
+    body: "{\"expand\":\"attributes\",\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=change_user@example.com\",\"rel\":\"self\"},\"name\":\"change_user@example.com\",\"first-name\":\"New First\",\"last-name\":\"And Last Name\",\"display-name\":\"New First And Last Name\",\"email\":\"change_user@example.com\",\"password\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=change_user@example.com\",\"rel\":\"edit\"}},\"active\":false,\"attributes\":{\"attributes\":[],\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=change_user@example.com\",\"rel\":\"self\"}}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:02 GMT
 - request: 
     method: delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=change_user@example.com
     body: ""
     headers: 
       Accept: 
@@ -130,10 +124,10 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=51027B4478F09AAD6E8526E38593CC83; Path=/crowd
+      - JSESSIONID=A6E563D48859DDEAA9B59B8A42EDCA88; Path=/crowd
       Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
+      - Wed, 21 Dec 2011 20:57:01 GMT
     body: ""
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:02 GMT
 recorded_with: VCR 2.0.0.rc1

@@ -26,6 +26,20 @@ describe Crowd::Client::User do
     end
   end
 
+  describe "Update user" do
+    before { @user = Crowd::Client::User.create :username => 'change_user@example.com', :password => 'test', :first_name => 'Change', :last_name => 'User', :email => 'change_user@example.com' }
+    after { @user.destroy }
+    subject { @user }
+
+    it "should update user properties" do
+      subject.update_attibutes(:first_name => 'New First', :last_name => 'And Last Name')
+      subject.reload!
+      subject.first_name.should == 'New First'
+      subject.last_name.should == 'And Last Name'
+    end
+  end
+
+
   describe "authenticate" do
     it "should return true if the password is valid" do
       subject.authenticate?('password').should be_true

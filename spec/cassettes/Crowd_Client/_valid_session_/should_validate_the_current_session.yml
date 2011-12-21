@@ -25,23 +25,23 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=FBA5ADF7D45007E56CEFC842487EF07A; Path=/crowd
+      - JSESSIONID=EA513801017DA2AB7838EF7EFD3EEC5D; Path=/crowd
       Cache-Control: 
       - no-cache, no-store, no-transform
       Location: 
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
       Content-Type: 
       - application/json
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:19:00 GMT
-    body: "{\"expand\":\"user\",\"token\":\"CFR8rIt6TfAXgjfM6rahMQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00\",\"rel\":\"self\"}}"
+      - Wed, 21 Dec 2011 20:57:00 GMT
+    body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
 - request: 
     method: post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
     body: "{}"
     headers: 
       Accept: 
@@ -64,7 +64,7 @@ http_interactions:
       X-Crowd-User-Management-Version: 
       - "1.1"
       Set-Cookie: 
-      - JSESSIONID=B522BC44F13A11183EE5D746BB91AFC8; Path=/crowd
+      - JSESSIONID=57B97B17CC2E49CBB88BA9E297094E4C; Path=/crowd
       Cache-Control: 
       - no-cache, no-store, no-transform
       Content-Type: 
@@ -72,8 +72,8 @@ http_interactions:
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Wed, 21 Dec 2011 20:19:00 GMT
-    body: "{\"expand\":\"user\",\"token\":\"CFR8rIt6TfAXgjfM6rahMQ00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/CFR8rIt6TfAXgjfM6rahMQ00\",\"rel\":\"self\"}}"
+      - Wed, 21 Dec 2011 20:57:00 GMT
+    body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:19:01 GMT
+  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
 recorded_with: VCR 2.0.0.rc1

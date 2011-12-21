@@ -25,7 +25,7 @@ module Crowd
 
       raise Exception::AuthenticationFailed.new if response.status == 400 && response.body['reason'] == 'INVALID_USER_AUTHENTICATION'
       raise Exception::InactiveAccount.new if response.status == 400 && response.body['reason'] == 'INACTIVE_ACCOUNT'
-      raise Exception::UnknownError if response.status != 201
+      raise Exception::UnknownError.new(response.body.to_s) if response.status != 201
       return response.body['token']
     end
 
@@ -36,7 +36,7 @@ module Crowd
 
     def logout(token)
       response = connection.delete("session/#{token}", {})
-      raise Exception::UnkownError if response.status != 204
+      raise Exception::UnknownError.new(response.body.to_s) if response.status != 204
     end
 
     def user(token)

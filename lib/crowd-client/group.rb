@@ -23,7 +23,7 @@ class Crowd::Client::Group
     end
     raise ::Crowd::Client::Exception::NotFound.new("Group '#{groupname}' was not found") if response.status == 404
     raise ::Crowd::Client::Exception::NotFound.new("User '#{user.username}' was not found") if response.status == 400
-    raise ::Crowd::Client::Exception::UnknownError if response.status != 201
+    raise ::Crowd::Client::Exception::UnknownError.new(response.body.to_s) if response.status != 201
   end
 
   def remove_user(user)
@@ -32,7 +32,7 @@ class Crowd::Client::Group
       request.params[:username] = user.username
     end
     raise ::Crowd::Client::Exception::NotFound.new("User '#{user.username}' was not found") if response.status == 404
-    raise ::Crowd::Client::Exception::UnknownError if response.status != 204
+    raise ::Crowd::Client::Exception::UnknownError.new(response.body.to_s) if response.status != 204
   end
 
   private
