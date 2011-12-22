@@ -33,6 +33,10 @@ class Crowd::Client::User
     user_attributes['email']
   end
 
+  def active
+    user_attributes['active']
+  end
+
   def groups(reload=false)
     return @groups if @groups && !reload
     response = connection.get("user/group/nested") do |request|
