@@ -53,7 +53,7 @@ class Crowd::Client::User
     user_attributes(true)
   end
 
-  def update_attibutes(attributes)
+  def update_attributes(attributes)
     assign_attributes attributes
     save
   end

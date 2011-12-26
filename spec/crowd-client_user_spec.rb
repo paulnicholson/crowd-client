@@ -32,7 +32,7 @@ describe Crowd::Client::User do
     subject { @user }
 
     it "should update user properties" do
-      subject.update_attibutes(:first_name => 'New First', :last_name => 'And Last Name', :active => true)
+      subject.update_attributes(:first_name => 'New First', :last_name => 'And Last Name', :active => true)
       subject.reload!
       subject.first_name.should == 'New First'
       subject.last_name.should == 'And Last Name'
