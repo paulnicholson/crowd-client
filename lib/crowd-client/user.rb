@@ -62,7 +62,7 @@ class Crowd::Client::User
     if new_record
       response = connection.post('user', {'name' => username, 'active' => true}.merge(@attributes))
       self.new_record = false
-      raise ::Crowd::Client::Exception::UnknownError.new(response.body.to_s) if response.status != 201
+      raise ::Crowd::Client::Exception::UnknownError.new(response.body) if response.status != 201
     else
       response = connection.put('user', {'name' => username}.merge(@attributes)) do |request|
         request.params[:username] = username
@@ -77,7 +77,7 @@ class Crowd::Client::User
       request.params[:username] = username
     end
     raise ::Crowd::Client::Exception::NotFound.new("User '#{user.username}' was not found") if response.status == 404
-    raise ::Crowd::Client::Exception::UnknownError.new(response.body.to_s) if response.status != 204
+    raise ::Crowd::Client::Exception::UnknownError.new(response.body) if response.status != 204
   end
 
   def authenticate?(password)
@@ -92,7 +92,7 @@ class Crowd::Client::User
       request.params[:username] = username
     end
     raise ::Crowd::Client::Exception::NotFound.new("User '#{user.username}' was not found") if response.status == 404
-    raise ::Crowd::Client::Exception::UnknownError.new(response.body.to_s) if response.status != 204
+    raise ::Crowd::Client::Exception::UnknownError.new(response.body) if response.status != 204
   end
 
   private
