@@ -1,4 +1,5 @@
 require "crowd-client/version"
+require "crowd-client/logger"
 require "crowd-client/exceptions"
 require "ostruct"
 require "faraday"
@@ -68,7 +69,7 @@ module Crowd
         :user_agent => "Crowd Client for Ruby/#{VERSION}"
       ) do |builder|
           builder.request  :json
-          builder.use Faraday::Response::Logger, config.logger if config.logger
+          builder.use Crowd::Client::Logger, config.logger if config.logger
           builder.use Faraday::Response::ParseJson
           builder.adapter  :patron
       end.tap {|connection| connection.basic_auth config.application, config.password }
