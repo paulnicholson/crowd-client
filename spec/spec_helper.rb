@@ -1,6 +1,7 @@
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 require 'vcr'
+require 'rspec'
 Dir[File.join(File.dirname(__FILE__), "spec/support/**/*.rb")].each {|f| require f}
 
 VCR.configure do |c|
@@ -18,7 +19,7 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
   config.mock_with :rspec
-  config.extend VCR::RSpec::Macros
+#  config.extend VCR::RSpec::Macros
 
   vcr_cassette_name_for = lambda do |metadata|
     description = metadata[:description]
