@@ -47,6 +47,11 @@ module Crowd
       response.body['user']
     end
 
+    def search(email)
+      response = connection.get("search?entity-type=user&restriction=" + CGI::escape("email=#{email}"))
+      response.body['users']
+    end
+
     def user_groups(username)
       response = connection.get("user/group/nested") do |request|
         request.params[:username] = username
