@@ -61,6 +61,12 @@ describe Crowd::Client do
     end
   end
 
+  describe "#search" do
+    it "should return user" do
+      subject.search("user@example.com").size.should == 1
+    end
+  end
+
   describe "#logout" do
     it "should logout the current session" do
       token = subject.login('user@example.com', 'password')

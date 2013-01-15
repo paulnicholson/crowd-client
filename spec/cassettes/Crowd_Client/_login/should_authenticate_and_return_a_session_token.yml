@@ -1,42 +1,42 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
     body: "{\"username\":\"user@example.com\",\"password\":\"password\"}"
-    headers: 
-      Accept: 
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Content-Type: 
+      Content-Type:
       - application/json
-      Expect: 
+      Expect:
       - ""
-  response: 
-    status: 
+  response:
+    status:
       code: 201
       message: Created
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
+      X-Crowd-User-Management-Version:
       - "1.1"
-      Set-Cookie: 
+      Set-Cookie:
       - JSESSIONID=0A0D1DC5127E712AAA7765BBEA011013; Path=/crowd
-      Cache-Control: 
+      Cache-Control:
       - no-cache, no-store, no-transform
-      Location: 
+      Location:
       - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
-      Content-Type: 
+      Content-Type:
       - application/json
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
+      Date:
       - Wed, 21 Dec 2011 20:57:00 GMT
     body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
-    http_version: 
+    http_version:
   recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
 recorded_with: VCR 2.0.0.rc1
