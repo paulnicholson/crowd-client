@@ -1,36 +1,36 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/nested?groupname=MyGroup
-    body: ""
-    headers: 
-      Accept: 
+    body: ''
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=792FE6F27F3D97B9254EDE56700F643D; Path=/crowd
-      Content-Type: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=B482D635EBDE9C18BF1C8F284A66059F; Path=/crowd
+      Content-Type:
       - application/json
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Wed, 21 Dec 2011 20:57:00 GMT
-    body: "{\"expand\":\"user\",\"users\":[{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"}]}"
+      Date:
+      - Tue, 15 Jan 2013 17:34:42 GMT
+    body: ! '{"expand":"user","users":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"}]}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:42 GMT
 recorded_with: VCR 2.0.0.rc1

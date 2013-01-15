@@ -1,40 +1,41 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
-    body: "{\"username\":\"inactive_user@example.com\",\"password\":\"password\"}"
-    headers: 
-      Accept: 
+    body: ! '{"username":"inactive_user@example.com","password":"password"}'
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Content-Type: 
+      Content-Type:
       - application/json
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 400
       message: Bad Request
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=3AACFC8B062C5E0FA551BF080E4F78B0; Path=/crowd
-      Content-Type: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=2AEBE5F578693CF9CE191999E7DEB217; Path=/crowd
+      Content-Type:
       - application/json
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Wed, 21 Dec 2011 20:57:00 GMT
-      Connection: 
+      Date:
+      - Tue, 15 Jan 2013 17:34:42 GMT
+      Connection:
       - close
-    body: "{\"reason\":\"INACTIVE_ACCOUNT\",\"message\":\"Account with name <inactive_user@example.com> is inactive\"}"
+    body: ! '{"reason":"INACTIVE_ACCOUNT","message":"Account with name <inactive_user@example.com>
+      is inactive"}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
 recorded_with: VCR 2.0.0.rc1

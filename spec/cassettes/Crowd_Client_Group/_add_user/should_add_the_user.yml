@@ -1,139 +1,139 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user
-    body: "{\"name\":\"group_add@example.com\",\"active\":true,\"password\":{\"value\":\"test\"},\"first-name\":\"Group\",\"last-name\":\"Add\",\"email\":\"group_add@example.com\"}"
-    headers: 
-      Accept: 
+    body: ! '{"name":"group_add@example.com","active":true,"password":{"value":"test"},"first-name":"Group","last-name":"Add","email":"group_add@example.com"}'
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Content-Type: 
+      Content-Type:
       - application/json
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 201
       message: Created
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=A7EDC3C42E7B3B2C39563999A7A06DFC; Path=/crowd
-      Location: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=DB891B71B3E0F1C66D6D3810F040E318; Path=/crowd
+      Location:
       - http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
-      Content-Type: 
+      Content-Type:
       - application/json
-      Content-Length: 
-      - "0"
-      Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
-    body: ""
+      Content-Length:
+      - '0'
+      Date:
+      - Tue, 15 Jan 2013 17:34:41 GMT
+    body: ''
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
-- request: 
+  recorded_at: Tue, 15 Jan 2013 17:34:41 GMT
+- request:
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup
-    body: "{\"name\":\"group_add@example.com\"}"
-    headers: 
-      Accept: 
+    body: ! '{"name":"group_add@example.com"}'
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Content-Type: 
+      Content-Type:
       - application/json
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 201
       message: Created
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=25B78F520DC2777DFB390EAB8AE9F8B5; Path=/crowd
-      Location: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=D008AADA7E879CA4F283F7037D5421E0; Path=/crowd
+      Location:
       - http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/direct?groupname=MyGroup&username=group_add@example.com
-      Content-Type: 
+      Content-Type:
       - application/json
-      Content-Length: 
-      - "0"
-      Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
-    body: ""
+      Content-Length:
+      - '0'
+      Date:
+      - Tue, 15 Jan 2013 17:34:41 GMT
+    body: ''
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
-- request: 
+  recorded_at: Tue, 15 Jan 2013 17:34:41 GMT
+- request:
     method: get
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/group/user/nested?groupname=MyGroup
-    body: ""
-    headers: 
-      Accept: 
+    body: ''
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=79EBB59CD9A9AC93B34E8C0FE0F03541; Path=/crowd
-      Content-Type: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=D9D383AE45E788F4C6EF8A47F77712C2; Path=/crowd
+      Content-Type:
       - application/json
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
-    body: "{\"expand\":\"user\",\"users\":[{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com\",\"rel\":\"self\"},\"name\":\"group_add@example.com\"},{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"}]}"
+      Date:
+      - Tue, 15 Jan 2013 17:34:41 GMT
+    body: ! '{"expand":"user","users":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com","rel":"self"},"name":"group_add@example.com"},{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"}]}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
-- request: 
+  recorded_at: Tue, 15 Jan 2013 17:34:41 GMT
+- request:
     method: delete
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=group_add@example.com
-    body: ""
-    headers: 
-      Accept: 
+    body: ''
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 204
       message: No Content
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=51027B4478F09AAD6E8526E38593CC83; Path=/crowd
-      Date: 
-      - Wed, 21 Dec 2011 20:56:59 GMT
-    body: ""
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=70248A3719E0B881F4B8DA82D9C9990E; Path=/crowd
+      Date:
+      - Tue, 15 Jan 2013 17:34:41 GMT
+    body: ''
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:56:59 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:41 GMT
 recorded_with: VCR 2.0.0.rc1

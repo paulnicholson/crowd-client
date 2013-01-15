@@ -3,9 +3,7 @@ http_interactions:
 - request:
     method: get
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/search?entity-type=user&restriction=email=user@example.com
-    body:
-      encoding: US-ASCII
-      string: ''
+    body: ''
     headers:
       Accept:
       - application/json
@@ -16,41 +14,25 @@ http_interactions:
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hlLUNveW90ZS8xLjE=
-      !binary "WC1FbWJlZGRlZC1Dcm93ZC1WZXJzaW9u":
-      - !binary |-
-        Q3Jvd2QvMi41LjA=
-      !binary "WC1Dcm93ZC1Vc2VyLU1hbmFnZW1lbnQtVmVyc2lvbg==":
-      - !binary |-
-        MS4y
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD0wREY5NkQ5MEUyNTVBM0IwMkY2MzkwQUJBMDJBMEQxNTsg
-        UGF0aD0vY3Jvd2Q=
-      !binary "Q2FjaGUtQ29udHJvbA==":
-      - !binary |-
-        bm8tY2FjaGUsIG5vLXN0b3JlLCBuby10cmFuc2Zvcm0=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbg==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VHVlLCAxNSBKYW4gMjAxMyAxNjo1NjozNCBHTVQ=
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJleHBhbmQiOiJ1c2VyIiwidXNlcnMiOlt7ImxpbmsiOnsiaHJlZiI6Imh0
-        dHA6Ly9jcm93ZDo4MDk1L2Nyb3dkL3Jlc3QvdXNlcm1hbmFnZW1lbnQvMS91
-        c2VyP3VzZXJuYW1lPWRtaXRyaXkudmFzaWxlYyIsInJlbCI6InNlbGYifSwi
-        bmFtZSI6ImRtaXRyaXkudmFzaWxlYyJ9XX0=
-    http_version:
-  recorded_at: Tue, 15 Jan 2013 16:56:34 GMT
-recorded_with: VCR 2.4.0
+      Server:
+      - Apache-Coyote/1.1
+      X-Embedded-Crowd-Version:
+      - Crowd/2.3.3
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=D9FD1EE1F63817E389212B285D8A95F2; Path=/crowd
+      Cache-Control:
+      - no-cache, no-store, no-transform
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 15 Jan 2013 17:34:42 GMT
+    body: ! '{"expand":"user","users":[{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"}]}'
+    http_version: 
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
+recorded_with: VCR 2.0.0.rc1

@@ -1,79 +1,79 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
-    body: "{\"username\":\"user@example.com\",\"password\":\"password\"}"
-    headers: 
-      Accept: 
+    body: ! '{"username":"user@example.com","password":"password"}'
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Content-Type: 
+      Content-Type:
       - application/json
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 201
       message: Created
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=EA513801017DA2AB7838EF7EFD3EEC5D; Path=/crowd
-      Cache-Control: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=BCB80C2AF4A111CF55780FBC70053C8D; Path=/crowd
+      Cache-Control:
       - no-cache, no-store, no-transform
-      Location: 
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
-      Content-Type: 
+      Location:
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00
+      Content-Type:
       - application/json
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Wed, 21 Dec 2011 20:57:00 GMT
-    body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
+      Date:
+      - Tue, 15 Jan 2013 17:34:42 GMT
+    body: ! '{"expand":"user","token":"w6iHXmaejAjhImmV4K9h6A00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00","rel":"self"}}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
-- request: 
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
+- request:
     method: post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
-    body: "{}"
-    headers: 
-      Accept: 
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00
+    body: ! '{}'
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Content-Type: 
+      Content-Type:
       - application/json
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=57B97B17CC2E49CBB88BA9E297094E4C; Path=/crowd
-      Cache-Control: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=1E41A8DFDC3889F195E2C0886D7C0FE3; Path=/crowd
+      Cache-Control:
       - no-cache, no-store, no-transform
-      Content-Type: 
+      Content-Type:
       - application/json
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Wed, 21 Dec 2011 20:57:00 GMT
-    body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
+      Date:
+      - Tue, 15 Jan 2013 17:34:42 GMT
+    body: ! '{"expand":"user","token":"w6iHXmaejAjhImmV4K9h6A00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00","rel":"self"}}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
 recorded_with: VCR 2.0.0.rc1

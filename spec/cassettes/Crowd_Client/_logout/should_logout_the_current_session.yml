@@ -3,9 +3,7 @@ http_interactions:
 - request:
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
-    body:
-      encoding: UTF-8
-      string: ! '{"username":"user@example.com","password":"password"}'
+    body: ! '{"username":"user@example.com","password":"password"}'
     headers:
       Accept:
       - application/json
@@ -27,28 +25,24 @@ http_interactions:
       X-Crowd-User-Management-Version:
       - '1.1'
       Set-Cookie:
-      - JSESSIONID=1BBB2D13C278D5DAD979913D2AA7AA3A; Path=/crowd
+      - JSESSIONID=69B0C1FE0857A55483F6C8F448EF19A5; Path=/crowd
       Cache-Control:
       - no-cache, no-store, no-transform
       Location:
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 21 Dec 2011 20:57:00 GMT
-    body:
-      encoding: UTF-8
-      string: ! '{"expand":"user","token":"XgeHSuCFniINHWnVaH5aDA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00","rel":"self"}}'
+      - Tue, 15 Jan 2013 17:34:42 GMT
+    body: ! '{"expand":"user","token":"w6iHXmaejAjhImmV4K9h6A00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00","rel":"self"}}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
-    body:
-      encoding: UTF-8
-      string: ! '{}'
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00
+    body: ! '{}'
     headers:
       Accept:
       - application/json
@@ -70,7 +64,7 @@ http_interactions:
       X-Crowd-User-Management-Version:
       - '1.1'
       Set-Cookie:
-      - JSESSIONID=4B3B482D00F3E769097B6587CB68C19C; Path=/crowd
+      - JSESSIONID=F99A43E218E4E0522889F3A21FD1BF2B; Path=/crowd
       Cache-Control:
       - no-cache, no-store, no-transform
       Content-Type:
@@ -78,18 +72,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 21 Dec 2011 20:57:00 GMT
-    body:
-      encoding: UTF-8
-      string: ! '{"expand":"user","token":"XgeHSuCFniINHWnVaH5aDA00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00","rel":"self"}}'
+      - Tue, 15 Jan 2013 17:34:43 GMT
+    body: ! '{"expand":"user","token":"w6iHXmaejAjhImmV4K9h6A00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00","rel":"self"}}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
 - request:
     method: delete
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
-    body:
-      encoding: UTF-8
-      string: ''
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00
+    body: ''
     headers:
       Accept:
       - application/json
@@ -109,20 +99,16 @@ http_interactions:
       X-Crowd-User-Management-Version:
       - '1.1'
       Set-Cookie:
-      - JSESSIONID=D585C5539158CEACF9F39F3ACD626A53; Path=/crowd
+      - JSESSIONID=23EE9B60B2996D838814043FEFA14FEB; Path=/crowd
       Date:
-      - Wed, 21 Dec 2011 20:57:00 GMT
-    body:
-      encoding: UTF-8
-      string: ''
+      - Tue, 15 Jan 2013 17:34:43 GMT
+    body: ''
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
 - request:
     method: post
-    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
-    body:
-      encoding: UTF-8
-      string: ! '{}'
+    uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00
+    body: ! '{}'
     headers:
       Accept:
       - application/json
@@ -144,69 +130,14 @@ http_interactions:
       X-Crowd-User-Management-Version:
       - '1.1'
       Set-Cookie:
-      - JSESSIONID=EF70FD12EB04501AAE32D69037F59983; Path=/crowd
+      - JSESSIONID=38B602CBFA35F24185D244C0F7B772BA; Path=/crowd
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 21 Dec 2011 20:57:01 GMT
-    body:
-      encoding: UTF-8
-      string: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
+      - Tue, 15 Jan 2013 17:34:43 GMT
+    body: ! '{"reason":"INVALID_SSO_TOKEN","message":"Token does not validate."}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
-- request:
-    method: post
-    uri: http://crowd:8095/crowd/rest/usermanagement/1/session
-    body:
-      encoding: UTF-8
-      string: ! '{"username":"user@example.com","password":"password"}'
-    headers:
-      Accept:
-      - application/json
-      Authorization:
-      - Basic Y3Jvd2Q6a1V4Nkw1aWE=
-      Content-Type:
-      - application/json
-      Expect:
-      - ''
-  response:
-    status:
-      code: 400
-      message: !binary |-
-        QmFkIFJlcXVlc3Q=
-    headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hlLUNveW90ZS8xLjE=
-      !binary "WC1FbWJlZGRlZC1Dcm93ZC1WZXJzaW9u":
-      - !binary |-
-        Q3Jvd2QvMi41LjA=
-      !binary "WC1Dcm93ZC1Vc2VyLU1hbmFnZW1lbnQtVmVyc2lvbg==":
-      - !binary |-
-        MS4y
-      !binary "U2V0LUNvb2tpZQ==":
-      - !binary |-
-        SlNFU1NJT05JRD02QUFCNEYxNTUyNjIzNTFBRDAyQzA4QTM0MUQwMzYzMzsg
-        UGF0aD0vY3Jvd2Q=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbg==
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        VHVlLCAxNSBKYW4gMjAxMyAxNjo1NjozNCBHTVQ=
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJyZWFzb24iOiJJTlZBTElEX1VTRVJfQVVUSEVOVElDQVRJT04iLCJtZXNz
-        YWdlIjoidXNlckBleGFtcGxlLmNvbSJ9
-    http_version: 
-  recorded_at: Tue, 15 Jan 2013 16:56:34 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Tue, 15 Jan 2013 17:34:43 GMT
+recorded_with: VCR 2.0.0.rc1

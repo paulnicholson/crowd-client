@@ -3,7 +3,7 @@ http_interactions:
 - request:
     method: post
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/session
-    body: "{\"username\":\"user@example.com\",\"password\":\"password\"}"
+    body: ! '{"username":"user@example.com","password":"password"}'
     headers:
       Accept:
       - application/json
@@ -12,7 +12,7 @@ http_interactions:
       Content-Type:
       - application/json
       Expect:
-      - ""
+      - ''
   response:
     status:
       code: 201
@@ -23,20 +23,20 @@ http_interactions:
       X-Embedded-Crowd-Version:
       - Crowd/2.3.3
       X-Crowd-User-Management-Version:
-      - "1.1"
+      - '1.1'
       Set-Cookie:
-      - JSESSIONID=0A0D1DC5127E712AAA7765BBEA011013; Path=/crowd
+      - JSESSIONID=5E01A0E55AFAC02A097D493DADA31B0F; Path=/crowd
       Cache-Control:
       - no-cache, no-store, no-transform
       Location:
-      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00
+      - http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00
       Content-Type:
       - application/json
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 21 Dec 2011 20:57:00 GMT
-    body: "{\"expand\":\"user\",\"token\":\"XgeHSuCFniINHWnVaH5aDA00\",\"user\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\"},\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/XgeHSuCFniINHWnVaH5aDA00\",\"rel\":\"self\"}}"
-    http_version:
-  recorded_at: Wed, 21 Dec 2011 20:57:00 GMT
+      - Tue, 15 Jan 2013 17:34:42 GMT
+    body: ! '{"expand":"user","token":"w6iHXmaejAjhImmV4K9h6A00","user":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com"},"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/session/w6iHXmaejAjhImmV4K9h6A00","rel":"self"}}'
+    http_version: 
+  recorded_at: Tue, 15 Jan 2013 17:34:42 GMT
 recorded_with: VCR 2.0.0.rc1

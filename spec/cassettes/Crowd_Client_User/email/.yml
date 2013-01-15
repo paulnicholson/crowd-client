@@ -1,36 +1,37 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
     uri: http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com
-    body: ""
-    headers: 
-      Accept: 
+    body: ''
+    headers:
+      Accept:
       - application/json
-      Authorization: 
+      Authorization:
       - Basic YXBwbGljYXRpb246cGFzc3dvcmQ=
-      Expect: 
-      - ""
-  response: 
-    status: 
+      Expect:
+      - ''
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      X-Embedded-Crowd-Version: 
+      X-Embedded-Crowd-Version:
       - Crowd/2.3.3
-      X-Crowd-User-Management-Version: 
-      - "1.1"
-      Set-Cookie: 
-      - JSESSIONID=2148E801B32AE4684E8BFB8C8533CB90; Path=/crowd
-      Content-Type: 
+      X-Crowd-User-Management-Version:
+      - '1.1'
+      Set-Cookie:
+      - JSESSIONID=A2B0CCD8FEA7E2CF3C3EE988408E8DEA; Path=/crowd
+      Content-Type:
       - application/json
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Wed, 21 Dec 2011 20:57:01 GMT
-    body: "{\"expand\":\"attributes\",\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com\",\"rel\":\"self\"},\"name\":\"user@example.com\",\"first-name\":\"Example\",\"last-name\":\"User\",\"display-name\":\"Example User\",\"email\":\"user@example.com\",\"password\":{\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com\",\"rel\":\"edit\"}},\"active\":true,\"attributes\":{\"attributes\":[],\"link\":{\"href\":\"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com\",\"rel\":\"self\"}}}"
+      Date:
+      - Tue, 15 Jan 2013 17:34:43 GMT
+    body: ! '{"expand":"attributes","link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user?username=user@example.com","rel":"self"},"name":"user@example.com","first-name":"Example","last-name":"User","display-name":"Example
+      User","email":"user@example.com","password":{"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/password?username=user@example.com","rel":"edit"}},"active":true,"attributes":{"attributes":[],"link":{"href":"http://127.0.0.1:8095/crowd/rest/usermanagement/1/user/attribute?username=user@example.com","rel":"self"}}}'
     http_version: 
-  recorded_at: Wed, 21 Dec 2011 20:57:01 GMT
+  recorded_at: Tue, 15 Jan 2013 17:34:44 GMT
 recorded_with: VCR 2.0.0.rc1
